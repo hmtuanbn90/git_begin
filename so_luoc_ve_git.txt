@@ -9,8 +9,6 @@ các lệnh cơ bản của git và chức năng của chúng
  	-tạo repo trên github và clone về máy
 		$ git clone URL
 		$ cd so_luoc_ve_git
-	
-	
 
 # Commit một tập tin
 
