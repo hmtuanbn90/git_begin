@@ -8,25 +8,25 @@ các lệnh cơ bản của git và chức năng của chúng
 # Tạo local repository.
  	-tạo repo trên github và clone về máy
 			$ git clone URL
-			$ cd so_luoc_ve_git
+			$ cd so_luoc_ve_git 		(hoac co the mo bang chuot phai trong folder chon open in terminal)
 
 # Commit một tập tin
 
-			$ git status 	(để kiểm tra trạng thái các tập tin)
-			$ git add tên_file	(để thêm vào Staging Area các tập tin mới tạo hoặc mới 					chỉnh sửa)
-			$ git commit -m "lời nhắn"	(dùng để lưu lại một bản chụp của các sự thay đổi 						trong thư mục làm việc)
+			$ git status 			(để kiểm tra trạng thái các tập tin)
+			$ git add tên_file		(để thêm vào Staging Area các tập tin mới tạo hoặc mới chỉnh sửa)
+			$ git commit -m "lời nhắn"	(dùng để lưu lại một bản chụp của các sự thay đổi trong thư mục làm việc)
 
 # Branch (nhánh) 
 
    -kỹ thuật phân nhánh
-			$ git branch	( kiểm tra các nhánh hiện có và vị trí nhánh đang thực hiện commit)
-			$ git branch Tên_nhánh	( để tạo nhánh mới )
+			$ git branch			( kiểm tra các nhánh hiện có và vị trí nhánh đang thực hiện commit)
+			$ git branch Tên_nhánh		( để tạo nhánh mới )
 			$ git checkout Tên_nhánh	(để truy cập vào branch muốn làm việc)
  
    -Gộp nhánh
-			$ git merge Tên_nhánh	(để gộp dữ liệu từ một branch khác sang branch đang làm 					việc)
+			$ git merge Tên_nhánh		(để gộp dữ liệu từ một branch khác sang branch đang làm việc)
 		-ví dụ muốn chuyển branch abc về branch master ta thực hiện như sau:
-			$ git checkout master 	(quay về branch master)
+			$ git checkout master 		(quay về branch master)
 			$ git merge abc
    -Xóa nhánh
 			$ git branch -d Tên nhánh
@@ -36,7 +36,7 @@ các lệnh cơ bản của git và chức năng của chúng
 	-Tạo thêm một remote mới (ví dụ ở đây đặt tên là inuit) từ địa chỉ https://github.com/csswizardry/inuit.css
 
 			$ git remote add inuit https://github.com/csswizardry/inuit.css
-			$ git remote -v (kiểm tra lại các remote đang có)
+			$ git remote -v 		(kiểm tra lại các remote đang có)
 	-fetch dữ liệu từ branch của inuit về new branch (fix_ui) cho working tree 
 			$ git remote show inuit	(hiển thị toàn bộ branch của remote inuit)
 			$ git branch fix_ui
@@ -47,11 +47,17 @@ các lệnh cơ bản của git và chức năng của chúng
 	-có thể commit và push lên remote repo của mình
 			$ git commit -m "lời nhắn"
 			$ git push {tên remote muốn push lên} fix_ui
+
 # Đưa tập tin đã commit lên remote repo
-	$ git push {tên remote repo} {tên nhánh}
+			$ git push {tên remote repo} {tên nhánh}
 
 	*NOTE:	- bắt buộc phải thực hiện commit trước khi muốn push lên remote repo
+		- khi push len nhanh nao thi bat buoc phai dang checkout tai nhanh do
 		- mặc định tên remote repo sau khi clone sẽ là origin, ta có thể đổi tên bằng lệnh sau
 			$ git remote rename tên_cũ tên_mới
 		- để kiểm tra tên của remote repo:
 			$ git remote -v
+
+# Lay tap tin tu remote ve local
+			$ git pull ten_remote ten_nhanh
+	
