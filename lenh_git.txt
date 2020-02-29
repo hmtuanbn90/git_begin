@@ -23,19 +23,22 @@ các lệnh cơ bản của git và chức năng của chúng
 			$ git branch Tên_nhánh		( để tạo nhánh mới )
 			$ git checkout Tên_nhánh	(để truy cập vào branch muốn làm việc)
  
-   -Gộp nhánh
+   -Gộp nhánh (ví dụ chuyển dữ liệu từ nhánh abc sang nhánh master)
 			$ git merge Tên_nhánh		(để gộp dữ liệu từ một branch khác sang branch đang làm việc)
 		-ví dụ muốn chuyển branch abc về branch master ta thực hiện như sau:
 			$ git checkout master 		(quay về branch master)
 			$ git merge abc
    -Xóa nhánh
 			$ git branch -d Tên nhánh
+	
+	-Thay đổi tên branch
+			$ git branch -m Tên_cũ Tên_mới
 
 # làm việc với Remote branch
 
 	-Tạo thêm một remote mới (ví dụ ở đây đặt tên là inuit) từ địa chỉ https://github.com/csswizardry/inuit.css
 
-			$ git remote add inuit https://github.com/csswizardry/inuit.css
+			$ git remote add inuit
 			$ git remote -v 		 (kiểm tra lại các remote đang có)
 	-fetch dữ liệu từ branch của inuit về new branch (fix_ui) cho working tree 
 			$ git remote show inuit	(hiển thị toàn bộ branch của remote inuit)
