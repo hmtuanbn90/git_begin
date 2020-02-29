@@ -11,7 +11,7 @@ các lệnh cơ bản của git và chức năng của chúng
 			$ cd so_luoc_ve_git 		(hoac co the mo bang chuot phai trong folder chon open in terminal)
 
 # Commit một tập tin
-
+			$ touch tên_file		(dùng khi muốn tạo một file mới từ màn hình teminal)
 			$ git status 			(để kiểm tra trạng thái các tập tin)
 			$ git add tên_file		(để thêm vào Staging Area các tập tin mới tạo hoặc mới chỉnh sửa)
 			$ git commit -m "lời nhắn"	(dùng để lưu lại một bản chụp của các sự thay đổi trong thư mục làm việc)
@@ -60,4 +60,4 @@ các lệnh cơ bản của git và chức năng của chúng
 
 # lấy tập tin từ remote về local:
 			$ git pull ten_remote tên_nhánh
-	
+	   
